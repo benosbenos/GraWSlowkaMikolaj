@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GraWSlowkaMikolaj.MainPage">
+
+    <Grid BackgroundColor="#E0E1DD">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <VerticalStackLayout>
+            <Label Text="Przetłumacz" TextColor="Black"/>
+            <Label Text="Słowa na język" TextColor="Black" />
+            <Label Text="Angielski" TextColor="Black"/>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Grid.Row="1">
+            <Label x:Name="Pytanie" TextColor="Black" Text="pytanie" HorizontalOptions="Center" VerticalOptions="Center" FontSize="48" FontAttributes="Bold" Margin="50"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Entry x:Name="Odpowiedz" Placeholder="Odpowiedz" WidthRequest="300" BackgroundColor="#FFFFFF" TextColor="Black"/>
+                <Button Text="Sprawdz" Clicked="Button_Clicked" BackgroundColor="#415A77" TextColor="Black"/>
+            </StackLayout>
+        </VerticalStackLayout>
+
+        <HorizontalStackLayout Grid.Row="2" Spacing="500" HorizontalOptions="Center">
+            <Label x:Name="Zycia" Text="Zycia: 3" TextColor="Black"/>
+            <Label x:Name="Tlumacz" Text="Przetłumaczone: 0" TextColor="Black"/>
+        </HorizontalStackLayout>
+
+    </Grid>
+
+</ContentPage>
